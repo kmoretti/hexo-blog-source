@@ -27,9 +27,7 @@ jobs:
             - name: Setup Node.js
               uses: actions/setup-node@v4
               with:
-                  node-version: "20"
-                  cache: "pnpm"
-                  cache-dependency-path: blog/pnpm-lock.yaml
+                  node-version: "22"
 
             # 4. 安装依赖（进入 blog 子目录）
             - name: Install Dependencies
@@ -52,7 +50,7 @@ jobs:
                   personal_token: ${{ secrets.GIT_TOKEN }}
                   external_repository: kmoretti/hexo-blog
                   publish_branch: main
-                  publish_dir: ./public
+                  publish_dir: ./blog/public
                   commit_message: ${{ github.event.head_commit.message }}
                   user_name: "github-actions[bot]"
                   user_email: "github-actions[bot]@users.noreply.github.com"
