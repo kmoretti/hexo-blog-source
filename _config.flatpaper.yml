@@ -51,8 +51,8 @@ background:
   style: cross
 
 profile:
-  role: 日常记录
-  bio: 介绍一下自己 — 一两句话，写写你想被别人记住的部分。
+  role: 一个普通的大学生
+  bio: 人生如逆旅，我亦是行人。
   # 头像图片路径（站点根的 source/ 目录下）。留空则使用 CSS 绘制的默认头像。
   avatar: /images/avatar.png
   # 头像图片形状：square（默认，原始方形）或 circle（应用圆形遮罩）
@@ -132,7 +132,7 @@ home_hero:
   cta_text: 开始阅读
   cta_link: "#flatpaper-home-content"
   # 贴纸按钮背景：01-09、random，或自定义图片路径。
-  cta_background: https://imgbed.081531.xyz/file/telegram/老年.jpg
+  cta_background: 01
   #
   # Hero 区域的快速导航链接。配置后将替代默认的波浪线分隔符。
   hero_links:
@@ -148,15 +148,14 @@ home_hero:
     enable: true
     draggable: true
     # 内置便签贴纸的文字。
-    # note_text: 今日
+    note_text: 欢迎访问~
     # 自定义图片贴纸最多渲染 5 张；加上内置便签后，开屏最多 6 个 sticker。link 可选，不配置则只是可拖动装饰。
-    # items:
-    #   - image: /images/stickers/memo.png
-    #     alt: 手账贴纸
-    #     size: 96
-    #   - image: /images/stickers/github.png
-    #     alt: GitHub
-    #     link: https://github.com/yourname
+    items:
+      - image: /cover/notebook.png
+        alt: 手账贴纸
+        size: 96
+      - image: /cover/snowman.png
+        alt: Snowman
 
 # 首页文章卡片摘要的最大字符数（无 <!-- more --> 时按正文截断）
 excerpt_length: 96
