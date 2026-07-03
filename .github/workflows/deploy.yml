@@ -29,18 +29,16 @@ jobs:
               with:
                   node-version: "22"
 
-            # 4. 安装依赖（进入 blog 子目录）
+            # 4. 安装依赖
             - name: Install Dependencies
-              working-directory: blog
               run: pnpm install --frozen-lockfile || pnpm install --no-frozen-lockfile
 
             # 5. 安装 Hexo CLI
             - name: Install Hexo CLI
               run: npm install -g hexo-cli
 
-            # 6. 生成静态文件（进入 blog 子目录）
+            # 6. 生成静态文件
             - name: Generate Public Files
-              working-directory: blog
               run: pnpm build
 
             # 7. 部署到 GitHub 仓库
@@ -50,7 +48,7 @@ jobs:
                   personal_token: ${{ secrets.GIT_TOKEN }}
                   external_repository: kmoretti/hexo-blog
                   publish_branch: main
-                  publish_dir: ./blog/public
+                  publish_dir: ./public
                   commit_message: ${{ github.event.head_commit.message }}
                   user_name: "github-actions[bot]"
                   user_email: "github-actions[bot]@users.noreply.github.com"
