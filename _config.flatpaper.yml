@@ -70,16 +70,16 @@ profile:
     # 写法 1：键 -> URL（按键名自动匹配图标）
     # 默认不提供任何条目，避免主题默认值在站点配置中被"注释掉"后仍然显现。
     # 在站点的 _config.flatpaper.yml 里按需启用：
-    GitHub: https://github.com/yourname
+    GitHub: https://s.081531.xyz/github
     # Twitter: https://twitter.com/yourname
-    Email: mailto:you@example.com
+    Email: mailto:mcy@kemiaosw.top
     # X: https://x.com/yourname
     # YouTube: https://youtube.com/@yourchannel
-    Bilibili: https://space.bilibili.com/12345
-    Steam: https://steamcommunity.com/id/yourname
+    Bilibili: https://s.081531.xyz/bilibili
+    Steam: https://steamcommunity.com/profiles/76561199504566391/
     # Facebook: https://facebook.com/yourname
     # Instagram: https://instagram.com/yourname
-    Telegram: https://t.me/yourname
+    Telegram: https://s.081531.xyz/telegram
     # Weibo: https://weibo.com/u/12345
     # 写法 2：对象 -> 指定使用某个内置图标（用于自定义命名 / 别名）
     # Mastodon:
@@ -110,7 +110,7 @@ welcome:
 # 首页开屏大图。默认关闭，不影响已有站点；仅在首页第一页渲染。
 # 开启后默认复用 profile 的头像、简介、社交链接与 RSS，也可以在这里覆盖。
 home_hero:
-  enable: false
+  enable: true
   # title: 我的手账
   # subtitle: 今日份记录
   # bio: 写给路过此处的你。
@@ -119,7 +119,7 @@ home_hero:
   #
   # 背景图。留空时使用主题内置的手账纸张背景；设置后图片会铺满开屏。
   # 也可配置为数组，浏览器每次载入随机使用一张。
-  # image: /images/hero.jpg
+  image: https://img.2005815.xyz/h
   # image:
   #   - /images/hero-1.jpg
   #   - /images/hero-2.jpg
