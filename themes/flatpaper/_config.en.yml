@@ -212,8 +212,15 @@ tags:
   style: tape
 
 # Friend links style: default | tape
+# siteshot: screenshot preview at the top of friend cards (URL or relative path under source/)
+# feeds: friend RSS URL (alias for rss field)
 links:
   style: tape
+  # Friend latency status tags
+  # Set the result.json URL from your link-check service to show latency badges
+  # Color rules: green(≤2s) · light-yellow(≤5s) · dark-yellow(≤10s) · red(>10s or offline)
+  status:
+    url:
 
 # Friend-Circle-Lite compatible data.
 # https://github.com/willow-god/Friend-Circle-Lite

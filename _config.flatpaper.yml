@@ -279,8 +279,15 @@ tags:
   style: tape
 
 # 友链样式： default | tape
+# siteshot 字段：友链卡片顶部截图预览（URL 或 source/ 下的相对路径）
+# feeds 字段：友链 RSS 地址（与 rss 字段等效，兼容 feeds 命名）
 links:
   style: tape
+  # 友链延迟检测（状态标签）
+  # 填入检测服务的 result.json 地址后，友链卡片左上角会显示延迟标签
+  # 颜色规则：绿色(≤2s) · 浅黄(≤5s) · 深黄(≤10s) · 红色(>10s 或离线)
+  status:
+    url: https://fc.081531.xyz/link.json
 
 # Friend-Circle-Lite 兼容数据
 # https://github.com/willow-god/Friend-Circle-Lite
@@ -397,11 +404,11 @@ adsense:
 
 # 评论系统选择： twikoo | artalk （留空 / 删除则不启用评论区）
 # 只在文章和独立页面（layout: page）渲染；单篇可在 front-matter 用 `comments: false` 关闭。
-comments: artalk
+comments: twikoo
 
 # Twikoo（https://twikoo.js.org，需自行部署后端 https://twikoo.js.org/quick-start.html）
 twikoo:
-  envId:                                # Twikoo 后端 URL，例如：https://twikoo.example.com
+  envId: https://tk.081531.xyz                             # Twikoo 后端 URL，例如：https://twikoo.example.com
   # cdn:                                # 可选；覆盖默认 jsDelivr CDN（私有镜像 / 企业 CDN）
 
 # Artalk（https://artalk.js.org，需自行部署后端 https://artalk.js.org/guide/deploy.html）

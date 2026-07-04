@@ -212,8 +212,15 @@ tags:
   style: tape
 
 # 友链样式： default | tape
+# siteshot 字段：友链卡片顶部截图预览（URL 或 source/ 下的相对路径）
+# feeds 字段：友链 RSS 地址（与 rss 字段等效，兼容 feeds 命名）
 links:
   style: tape
+  # 友链延迟检测（状态标签）
+  # 填入检测服务的 result.json 地址后，友链卡片左上角会显示延迟标签
+  # 颜色规则：绿色(≤2s) · 浅黄(≤5s) · 深黄(≤10s) · 红色(>10s 或离线)
+  status:
+    url:
 
 # Friend-Circle-Lite 兼容数据
 # https://github.com/willow-god/Friend-Circle-Lite
