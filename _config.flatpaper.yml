@@ -21,7 +21,75 @@ menu:
     icon: link
   关于:
      link: /about/
-     icon: user 
+     icon: user
+
+# 关于页面配置
+about:
+  # 个人信息网格（每行 3 个，可自定义颜色）
+  profile:
+    - label: 姓名
+      value: "你的名字"
+      color: "#43a6c6"
+    - label: 生于
+      value: "2000"
+      color: "#c69043"
+    - label: 故乡
+      value: "中国"
+      color: "#d44040"
+    - label: 职业
+      value: "学生"
+      color: "#b04fe6"
+    - label: 兴趣
+      value: "编程与创作"
+      color: "#43c66f"
+    - label: 梦想
+      value: "创造价值"
+      color: "#c643b3"
+
+  # MBTI 性格（https://www.16personalities.com/ch）
+  personality:
+    type: "INFJ-A"
+    name: "提倡者"
+    url: "https://www.16personalities.com/ch/infj-人格"
+
+  # 座右铭
+  motto:
+    main:
+      - "前景可待，"
+      - "未来可期。"
+    sub: "活在自己的热爱里，而不是别人的眼光里。"
+
+  # 创作平台
+  creation:
+    - name: "稀土掘金"
+      url: "https://juejin.cn"
+    - name: "GitHub"
+      url: "https://github.com"
+
+  # 本站信息
+  versions:
+    - name: "FlatPaper"
+      version: "latest"
+    - name: "Hexo"
+      version: "8.x"
+
+  # 运行时间（留空则读取 blog.established）
+  runtime:
+    established: ""
+
+  # 站长联盟
+  union:
+    - name: "BlogFinder"
+      url: "https://bf.zzxworld.com"
+    - name: "博友圈"
+      url: "https://www.boyouquan.com"
+
+  # 心路历程
+  story:
+    content: |
+      欢迎来到我的个人博客！这里是我分享技术、记录生活、积累知识的小天地。
+      希望通过这个平台，与志同道合的朋友交流学习，共同进步。
+      如果你有任何想法或建议，欢迎随时与我交流！
 
 nav:
   enable: true
@@ -329,7 +397,7 @@ adsense:
 
 # 评论系统选择： twikoo | artalk （留空 / 删除则不启用评论区）
 # 只在文章和独立页面（layout: page）渲染；单篇可在 front-matter 用 `comments: false` 关闭。
-comments:
+comments: artalk
 
 # Twikoo（https://twikoo.js.org，需自行部署后端 https://twikoo.js.org/quick-start.html）
 twikoo:
@@ -338,8 +406,8 @@ twikoo:
 
 # Artalk（https://artalk.js.org，需自行部署后端 https://artalk.js.org/guide/deploy.html）
 artalk:
-  server:                               # Artalk 后端 URL，例如：https://artalk.example.com
-  site:                                 # 站点名（需与 Artalk 后台已注册的站点一致）
+  server: https://artalk.081531.xyz                               # Artalk 后端 URL，例如：https://artalk.example.com
+  site: 喵洛阁                                # 站点名（需与 Artalk 后台已注册的站点一致）
   # cdn_css:                            # 可选；覆盖默认 jsDelivr CSS
   # cdn_js:                             # 可选；覆盖默认 jsDelivr JS
 
