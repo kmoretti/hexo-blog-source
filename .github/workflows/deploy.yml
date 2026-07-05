@@ -37,11 +37,19 @@ jobs:
             - name: Install Hexo CLI
               run: npm install -g hexo-cli
 
-            # 6. 生成静态文件
-            - name: Generate Public Files
-              run: node link.js && pnpm build
+            # 6. 生成 friend.json 并构建
+            - name: Generate friend.json
+              run: node link.js
 
-            # 7. 部署到 GitHub 仓库
+            # 8. 构建静态文件
+            - name: Generate Public Files
+              run: pnpm build
+
+            # 8. 复制 friend.json 到构建产物
+            - name: Copy friend.json to public
+              run: cp source/friend.json public/friend.json
+
+            # 9. 部署到 GitHub 仓库
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v4
               with:
