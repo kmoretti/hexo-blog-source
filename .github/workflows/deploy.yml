@@ -39,7 +39,7 @@ jobs:
 
             # 6. 生成静态文件
             - name: Generate Public Files
-              run: pnpm build
+              run: node link.js && pnpm build
 
             # 7. 部署到 GitHub 仓库
             - name: Deploy to GitHub Pages

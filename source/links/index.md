@@ -1,9 +1,44 @@
 ---
-title: 友情链接
+title: 友人帐
 type: link
-subtitle: 欢迎访问我的友情链接
+subtitle: 我的友链页面
 top_img: https://jsd.268682.xyz/gh/Kemeow0815/img@main/img/bg.webp               # 顶部图片(可选)
 ---
+
+{% tabs yaml %}
+我的友链&友链格式
+<!-- tab yaml -->
+- name: 喵洛阁
+link: https://blog.kemeow.top/
+avatar: https://q2.qlogo.cn/headimg_dl?dst_uin=3149261770&spec=0
+descr: 人生如逆旅，我亦是行人。
+feeds: https://blog.kemeow.top/atom.xml
+friendslink: https://blog.kemeow.top/link
+siteshot: https://imgbed.081531.xyz/file/telegram/1jJZ7ynW.png
+     
+<!-- endtab -->
+<!-- tab json -->
+{
+  "name": "喵洛阁",
+  "link": "https://blog.kemeow.top/",
+  "avatar": "https://q2.qlogo.cn/headimg_dl?dst_uin=3149261770&spec=0",
+  "descr": "人生如逆旅，我亦是行人。",
+  "feeds": "https://blog.kemeow.top/atom.xml",
+  "friendslink": "https://blog.kemeow.top/link",
+  "siteshot": "https://imgbed.081531.xyz/file/telegram/1jJZ7ynW.png"
+}
+<!-- endtab -->
+<!-- tab 申请格式(yaml) -->
+- name: 网站名称
+link: 网站链接
+avatar: 头像
+descr: 网站介绍
+feeds: RSS
+friendslink: 您网站的友链页面
+siteshot: 网站截图
+     
+<!-- endtab -->
+{% endtabs %}
 
 > 你可以通过**评论**或**填写表单**两种方式来申请友链或更新信息，优先推荐使用**填写表单**的方式！
 
