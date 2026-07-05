@@ -1,0 +1,215 @@
+/* ============== MESSAGE BOARD ============== */
+.message-page {
+  padding-bottom: 32px;
+}
+
+.message-subtitle {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Envelope wrapper — centered */
+.message-envelope-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0;
+  padding: 20px 0;
+}
+
+/* Envelope container */
+.message-envelope {
+  position: relative;
+  width: 420px;
+  height: 280px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Tape decoration on top */
+.message-envelope::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  z-index: 5;
+  width: 50px;
+  height: 14px;
+  background-color: var(--tape-yellow);
+  background-image: var(--tape-stripes);
+  border-radius: 2px;
+  box-shadow: 0 2px 6px unquote('rgba(var(--paper-shadow-rgb), 0.1)');
+  filter: saturate(0.9);
+  pointer-events: none;
+}
+
+/* ===== Cover layer — the "envelope face" ===== */
+.message-envelope__cover {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: var(--paper);
+  border: 1px dashed var(--dash);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: var(--small-shadow);
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.6s ease 0.2s;
+}
+
+.message-envelope__icon {
+  width: 72px;
+  height: 54px;
+  color: var(--ink-soft);
+  opacity: 0.7;
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.message-envelope__hint {
+  color: var(--ink-soft);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+  opacity: 0.6;
+}
+
+.message-envelope__cta {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 2px;
+  transition: opacity 0.4s;
+}
+
+/* Hover effect on cover */
+.message-envelope__cover:hover .message-envelope__icon {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.message-envelope__cover:hover {
+  border-color: var(--color-accent);
+}
+
+/* ===== Letter layer — hidden inside ===== */
+.message-envelope__letter {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1;
+  background: var(--paper-solid);
+  border-radius: 8px;
+  padding: 28px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.8s ease 0.4s,
+              transform 0.8s ease 0.4s;
+  box-shadow: var(--paper-shadow);
+  /* Notebook lines */
+  background-image: linear-gradient(
+    var(--paper-solid) 0 27px,
+    rgba(221, 208, 181, 0.18) 27px 28px
+  );
+  background-size: 100% 28px;
+}
+
+.message-letter__content {
+  text-align: center;
+  width: 100%;
+}
+
+.message-letter__content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--ink-soft);
+  margin: 8px 0;
+}
+
+/* ===== Open state ===== */
+.message-envelope.is-open .message-envelope__cover {
+  transform: translateX(-110%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.message-envelope.is-open .message-envelope__letter {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Tape stays on top when open */
+.message-envelope.is-open::before {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+/* ===== Page content below envelope ===== */
+.message-intro {
+  margin-top: 32px;
+  padding: 32px 0 4px;
+  font-size: 14px;
+  border-top: 1px dashed var(--line);
+}
+
+.message-intro > :first-child { margin-top: 0; }
+.message-intro > :last-child { margin-bottom: 0; }
+
+/* ===== Dark mode ===== */
+.dark-mode .message-envelope__cover {
+  border-color: rgba(225, 230, 245, 0.12);
+}
+
+.dark-mode .message-envelope::before {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.22);
+}
+
+.dark-mode .message-envelope__letter {
+  background-image: linear-gradient(
+    var(--paper-solid) 0 27px,
+    rgba(225, 230, 245, 0.06) 27px 28px
+  );
+  background-size: 100% 28px;
+}
+
+.dark-mode .message-envelope__cover:hover {
+  border-color: var(--color-accent-muted);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+  .message-envelope {
+    width: 100%;
+    max-width: 340px;
+    height: 240px;
+  }
+
+  .message-envelope__icon {
+    width: 56px;
+    height: 42px;
+  }
+
+  .message-envelope__hint {
+    font-size: 14px;
+  }
+
+  .message-envelope__letter {
+    padding: 20px 16px;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .message-letter__content p {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,55 @@
+<%
+var pageTopImg = flatpaper_page_top_img_info(page);
+var mc = (theme.message && theme.message.content) ? theme.message.content : '写下你的留言，\n分享你的想法和祝福。';
+var mLines = mc.split('\n').filter(function(l) { return l.trim(); });
+%>
+
+<article class="article-paper message-page<%= pageTopImg.src ? ' article-paper--with-top-img article-paper--page-top-img' : '' %>">
+  <%- partial('_partial/page-top-img', { topImg: pageTopImg, label: page.title || '留言' }) %>
+  <header class="article-header">
+    <span class="label-pill"><%= page.title || '留言' %></span>
+    <h1><%= page.title || '留言板' %></h1>
+    <% if (page.subtitle) { %>
+      <p class="message-subtitle"><%= page.subtitle %></p>
+    <% } %>
+  </header>
+
+  <div class="message-envelope-wrap">
+    <div class="message-envelope" id="message-envelope">
+      <div class="message-envelope__cover">
+        <svg class="message-envelope__icon" viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="4" width="72" height="52" rx="4" stroke="currentColor" stroke-width="1.5" opacity="0.45"/>
+          <path d="M4 8 L40 36 L76 8" stroke="currentColor" stroke-width="1.5" opacity="0.45"/>
+          <circle cx="40" cy="30" r="5" fill="none" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+          <path d="M35 30 Q40 24 45 30" stroke="currentColor" stroke-width="1" opacity="0.25" fill="none"/>
+        </svg>
+        <span class="message-envelope__hint"><%= mc.split('\n')[0] || '写下你的留言' %></span>
+        <span class="message-envelope__cta">点击开启</span>
+      </div>
+      <div class="message-envelope__letter">
+        <div class="message-letter__content">
+          <% mLines.forEach(function(line) { %>
+            <p><%= line %></p>
+          <% }); %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <% if (page.content && page.content.trim()) { %>
+    <div class="article-content message-intro">
+      <%- page.content %>
+    </div>
+  <% } %>
+</article>
+
+<script>
+(function() {
+  var el = document.getElementById('message-envelope');
+  if (!el) return;
+  el.addEventListener('click', function() {
+    if (el.classList.contains('is-open')) return;
+    el.classList.add('is-open');
+  });
+})();
+</script>

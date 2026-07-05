@@ -222,6 +222,11 @@ links:
   status:
     url:
 
+# Message board page configuration
+# Welcome text shown on the envelope card (supports \n for line breaks)
+message:
+  content: "Write your message,\nshare your thoughts and blessings."
+
 # Friend-Circle-Lite compatible data.
 # https://github.com/willow-god/Friend-Circle-Lite
 # During generation, FlatPaper reads source/_data/links.yml and emits /friend.json.
