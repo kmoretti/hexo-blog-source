@@ -28,22 +28,22 @@ about:
   # 个人信息网格（每行 3 个，可自定义颜色）
   profile:
     - label: 姓名
-      value: "你的名字"
+      value: "MCY"
       color: "#43a6c6"
     - label: 生于
-      value: "2000"
+      value: "2005"
       color: "#c69043"
     - label: 故乡
-      value: "中国"
+      value: "江苏苏州"
       color: "#d44040"
     - label: 职业
       value: "学生"
       color: "#b04fe6"
     - label: 兴趣
-      value: "编程与创作"
+      value: "编程与小说阅读"
       color: "#43c66f"
     - label: 梦想
-      value: "创造价值"
+      value: "活得自由"
       color: "#c643b3"
 
   # MBTI 性格（https://www.16personalities.com/ch）
@@ -55,23 +55,23 @@ about:
   # 座右铭
   motto:
     main:
-      - "前景可待，"
-      - "未来可期。"
-    sub: "活在自己的热爱里，而不是别人的眼光里。"
+      - "人生如逆旅，"
+      - "我亦是行人。"
+    sub: "每一段旅行，都有终点。"
 
   # 创作平台
   creation:
-    - name: "稀土掘金"
-      url: "https://juejin.cn"
+    # - name: "稀土掘金"
+    #   url: "https://juejin.cn"
     - name: "GitHub"
-      url: "https://github.com"
+      url: "https://github.com/github"
 
   # 本站信息
   versions:
     - name: "FlatPaper"
-      version: "latest"
+      version: "0.3.6"
     - name: "Hexo"
-      version: "8.x"
+      version: "4.3.2"
 
   # 运行时间（留空则读取 blog.established）
   runtime:
@@ -79,34 +79,39 @@ about:
 
   # 站长联盟
   union:
-    - name: "BlogFinder"
-      url: "https://bf.zzxworld.com"
-    - name: "博友圈"
-      url: "https://www.boyouquan.com"
+    # - name: "BlogFinder"
+    #   url: "https://bf.zzxworld.com"
+    # - name: "博友圈"
+    #   url: "https://www.boyouquan.com"
 
   # 心路历程
   story:
     content: |
-      欢迎来到我的个人博客！这里是我分享技术、记录生活、积累知识的小天地。
-      希望通过这个平台，与志同道合的朋友交流学习，共同进步。
-      如果你有任何想法或建议，欢迎随时与我交流！
+      欢迎来到我的个人博客！这里是我分享日常、资源分享、踩坑历程的小站。
+      接触过Hexo、Astro、Nuxt等框架，然后发现了这个[主题](https://github.com/Homulilly/hexo-theme-flatpaper)，风格很喜欢，于是决定使用它。
+      基于这个主题自改了本博客。如果你有任何想法或建议，欢迎随时与我交流！
 
 nav:
   enable: true
   menu:
-    - title: Live DEMO
+    - title: 自建服务
       item:
-        - name: FlapaperDemo
-          link: https://flatpaper.nep.me/
-          icon: leaf
-        - name: Homulilly
-          link: https://homulilly.com/
-          icon: https://homulilly.com/images/avatar.jpg
-    - title: Project
-      item:
-        - name: Flatpaper Tools
-          link: https://hexotag.nep.me
-          icon: https://hexotag.nep.me/icon.svg
+        - name: 主页
+          link: https://www.081531.xyz/
+          icon: house
+        - name: 赞助
+          link: https://sponsor.081531.xyz/
+          icon: hand-coins
+        - name: OpenList
+          link: https://openlist.081531.xyz/
+          icon: cloud
+        - name: Ech0
+          link: https://m.081531.xyz/
+          icon: notebook-pen
+        - name: Astro博客
+          link: https://blog.081531.xyz/
+          icon: book
+          
 
 # Favicon：默认使用主题内置 /images/favicon.png。
 # 设为 false 时不输出 <link rel="icon">，交给浏览器请求站点根目录 /favicon.ico。

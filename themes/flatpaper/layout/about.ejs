@@ -262,9 +262,7 @@
         <span class="about-paper__label">心路历程</span>
         <div class="about-paper__heading">关于本站的介绍</div>
         <div class="about-story">
-          <% storyContent.split('\n').filter(function(l) { return l.trim(); }).forEach(function(line) { %>
-            <p><%= line.trim() %></p>
-          <% }); %>
+          <%- markdown(storyContent) %>
         </div>
       </div>
     </div>
