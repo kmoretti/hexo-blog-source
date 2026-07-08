@@ -1,0 +1,3 @@
+[submodule "themes/flatpaper"]
+	path = themes/flatpaper
+	url = git@github.com-kmoretti:kmoretti/hexo-theme-flatpaper.git

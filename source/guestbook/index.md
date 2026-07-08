@@ -1,7 +1,7 @@
 ---
 title: 留言板
 subtitle: 留下你的足迹，分享你的想法和祝福
-type: message
+type: guestbook
 top_img: https://jsd.268682.xyz/gh/Kemeow0815/img@main/img/bg.webp
 ---
 

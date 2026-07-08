@@ -17,6 +17,12 @@ jobs:
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
 
+            # 1b. 初始化子模块（CI 环境无 SSH key，将子模块 URL 临时改为 HTTPS）
+            - name: Init submodules
+              run: |
+                  git config --global url."https://github.com/kmoretti/hexo-theme-flatpaper.git".insteadOf "git@github.com-kmoretti:kmoretti/hexo-theme-flatpaper.git"
+                  git submodule update --init --recursive
+
             # 2. 安装 pnpm
             - name: Install pnpm
               uses: pnpm/action-setup@v2
