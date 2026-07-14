@@ -224,10 +224,10 @@ home_hero:
     note_text: 欢迎访问~
     # 自定义图片贴纸最多渲染 5 张；加上内置便签后，开屏最多 6 个 sticker。link 可选，不配置则只是可拖动装饰。
     items:
-      - image: /cover/notebook.png
+      - image: /cover/notebook.webp
         alt: 手账贴纸
         size: 96
-      - image: /cover/snowman.png
+      - image: /cover/snowman.webp
         alt: Snowman
 
 # 首页文章卡片摘要的最大字符数（无 <!-- more --> 时按正文截断）
@@ -448,6 +448,18 @@ google_fonts:
   # 等宽字体单独配置；也可以只填写 mono，不改变正文字体。
   mono:
     # - JetBrains Mono
+
+ech0_ticker:
+  enable: true
+  api: https://m.081531.xyz/api/echo/query
+  base_url: https://m.081531.xyz
+  proxy: /__ech0
+  page_size: 10
+  autoplay: true
+  interval: 6000
+  title: 今日手账
+  loading_text: 正在翻阅最新记录
+  empty_text: 暂时没有新的记录
 
 # 自定义 css 与 js 注入
 # head：每个条目原样输出到 </head> 之前
