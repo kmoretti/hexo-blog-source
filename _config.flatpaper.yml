@@ -115,7 +115,7 @@ nav:
 
 # Favicon：默认使用主题内置 /images/favicon.png。
 # 设为 false 时不输出 <link rel="icon">，交给浏览器请求站点根目录 /favicon.ico。
-# favicon: /images/favicon.png
+favicon: https://jsd.268682.xyz/gh/Kemeow0815/img@main/img/favicon-kemiao.ico
 # favicon: false
 
 # 背景特效
