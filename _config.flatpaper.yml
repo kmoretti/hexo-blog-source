@@ -16,9 +16,24 @@ menu:
       归档:
         link: /archives/
         icon: archive
+  页面:
+    icon: book-open-text
+    item:
+      说说:
+        link: /shuoshuo/
+        icon: notebook-pen
+      留言板:
+        link: /guestbook/
+        icon: message-circle 
   友链:
-    link: /links/
     icon: link
+    item:
+      友人帐:
+        link: /links/
+        icon: handshake
+      朋友圈:
+        link: /fcircle/
+        icon: group
   关于:
      link: /about/
      icon: user
@@ -460,6 +475,11 @@ ech0_ticker:
   title: 今日手账
   loading_text: 正在翻阅最新记录
   empty_text: 暂时没有新的记录
+
+# 日历侧边栏小部件
+calendar:
+  enable: true
+  lunar_api: https://open.lightxi.com/unpkg/chinese-lunar@0.1.4/lib/chinese-lunar.js
 
 # 自定义 css 与 js 注入
 # head：每个条目原样输出到 </head> 之前
