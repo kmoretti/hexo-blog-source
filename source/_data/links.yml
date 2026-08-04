@@ -40,9 +40,11 @@
       link: https://homulilly.com
       avatar: https://homulilly.com/images/avatar.jpg
       descr: 圆环之外，仍有未尽之愿。
-      siteshot: https://img.nep.me/blog/homulilly-home.webp
       feeds: https://homulilly.com/atom.xml
       friendslink: https://homulilly.com/links
+      siteshot: https://img.nep.me/blog/homulilly-home.webp
+      tags:
+        - Hexo
 - class_name: 博客主题作者
   class_desc: 大佬们~
   link_list: []
