@@ -1,0 +1,10 @@
+- class_name: 友情链接
+  class_desc: 我的小伙伴们
+  link_list:
+    - name: CWorld Site
+      link: https://cworld0.com
+      avatar: https://gravatar.loli.net/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200
+      descr: 求知若愚，虚怀若谷
+      siteshot: https://mifun.081531.xyz/api/files/content/rZXcgZqDLQFLmk4Ql3ArMw/preview
+      feeds: https://cworld0.com/rss.xml
+      friendslink: https://cworld0.com/links
