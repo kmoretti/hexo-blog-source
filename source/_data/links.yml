@@ -1,4 +1,5 @@
 - class_name: 网上邻居
+- class_name: 网上邻居
   class_desc: 我的小伙伴们
   link_list:
     - name: 清羽飞扬
@@ -36,6 +37,9 @@
       siteshot: https://jsd.268682.xyz/gh/Kemeow0815/img@main/img/2xnz.webp
       feeds: https://2x.nz/rss.xml
       friendslink: https://2x.nz/friends
+- class_name: 博客主题作者
+  class_desc: 大佬们~
+  link_list:
 - class_name: 博客主题作者
   class_desc: 大佬们~
   link_list:
