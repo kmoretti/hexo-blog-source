@@ -14,6 +14,8 @@ avatar: https://q2.qlogo.cn/headimg_dl?dst_uin=3149261770&spec=0
 descr: 人生如逆旅，我亦是行人。
 feeds: https://blog.kemeow.top/atom.xml
 friendslink: https://blog.kemeow.top/link
+tags:
+  - Hexo
 siteshot: https://imgbed.081531.xyz/file/telegram/1jJZ7ynW.png
      
 <!-- endtab -->
@@ -25,6 +27,7 @@ siteshot: https://imgbed.081531.xyz/file/telegram/1jJZ7ynW.png
   "descr": "人生如逆旅，我亦是行人。",
   "feeds": "https://blog.kemeow.top/atom.xml",
   "friendslink": "https://blog.kemeow.top/link",
+  "tags": ["Hexo"],
   "siteshot": "https://imgbed.081531.xyz/file/telegram/1jJZ7ynW.png"
 }
 <!-- endtab -->
@@ -35,6 +38,7 @@ avatar: 头像
 descr: 网站介绍
 feeds: RSS
 friendslink: 您网站的友链页面
+tags: 标签（可选，支持多个）
 siteshot: 网站截图
      
 <!-- endtab -->
